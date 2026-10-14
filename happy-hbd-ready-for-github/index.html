@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#201019">
+  <meta name="description" content="Happy birthday, Juliana">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>Happy birthday, Juliana</title>
+  <meta property="og:title" content="Happy birthday, Juliana">
+  <meta property="og:description" content="Open your gift">
+  <link rel="icon" type="image/svg+xml" href="assets/heart.svg">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="welcome" id="welcome" role="dialog" aria-modal="true" aria-labelledby="welcome-title">
+    <div class="welcome-card">
+      <h1 id="welcome-title">happy birthday,<br>Juliana</h1>
+      <button class="primary-button" id="enter" type="button">open your gift</button>
+    </div>
+  </div>
+
+  <main class="page" id="page">
+    <header class="header">
+      <div>
+        <span class="kicker">♡ a birthday gift for Juliana</span>
+        <h1>Juliana’s little room ♡</h1>
+      </div>
+      <button type="button" class="help-button" id="help" aria-label="How to explore the room">?</button>
+    </header>
+
+    <p class="instruction" id="instruction">tap something and she’ll check it out. <span class="mobile-only">← swipe to see more →</span></p>
+
+    <section class="room-shell" aria-label="An interactive cozy bedroom">
+      <div class="room-viewport" id="viewport" tabindex="0" aria-label="Swipe left or right to explore the illustrated room">
+        <div class="room" id="room">
+          <img src="assets/room.png" class="room-art" width="1254" height="1254" alt="Isometric sunset bedroom with a red quilt, laptop, pixelated framed photo, letter and record player" draggable="false">
+
+          <div class="character" id="character" aria-hidden="true">
+            <img class="character-sprite" src="assets/girl-portrait.png" alt="" draggable="false">
+            <div class="character-shadow"></div>
+          </div>
+
+          <button type="button" class="hotspot" data-item="photo" style="--x:14;--y:28;--w:12;--h:14" aria-label="Open the framed photo" title="photo frame"><span class="ping" aria-hidden="true">♡</span></button>
+          <button type="button" class="hotspot" data-item="laptop" style="--x:24;--y:48;--w:17;--h:11" aria-label="Open the laptop" title="laptop"><span class="ping" aria-hidden="true">!</span></button>
+          <button type="button" class="hotspot" data-item="letter" style="--x:40;--y:54;--w:10;--h:9" aria-label="Read the letter" title="letter"><span class="ping" aria-hidden="true">✉</span></button>
+          <button type="button" class="hotspot" data-item="record" style="--x:58;--y:34;--w:14;--h:11" aria-label="Use the record player" title="record player"><span class="ping" aria-hidden="true">♫</span></button>
+          <!-- Bed, matcha, smokes, lamp and desk decorations are not interactive. -->
+        </div>
+      </div>
+      <div class="side-hint" aria-hidden="true">swipe the room to explore · ♡</div>
+    </section>
+
+    <nav class="navigation" aria-label="Room object shortcuts">
+      <button data-go="laptop" type="button">💻 laptop</button>
+      <button data-go="letter" type="button">💌 letter</button>
+      <button data-go="photo" type="button">🖼️ photo</button>
+      <button data-go="record" type="button">💿 music</button>
+    </nav>
+    <footer>made for Juliana’s birthday ♡ hope today treats you well.</footer>
+  </main>
+
+  <div class="dialog-backdrop" id="backdrop" hidden>
+    <section class="dialog" id="dialog" role="dialog" aria-modal="true" aria-labelledby="dialog-title" tabindex="-1">
+      <button type="button" class="close-button" id="close" aria-label="Close">×</button>
+      <div id="dialog-body"></div>
+    </section>
+  </div>
+</body>
+</html>
